@@ -3,7 +3,7 @@ apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
   name: nodejs-build
-  namespace: cloud53375-dev
+  namespace: satyam321-dev
   labels:
     app: nodejs-app
 spec:
@@ -32,6 +32,6 @@ apiVersion: image.openshift.io/v1
 kind: ImageStream
 metadata:
   name: nodejs-image
-  namespace: cloud53375-dev
+  namespace: satyam321-dev
   labels:
     app: nodejs-app
