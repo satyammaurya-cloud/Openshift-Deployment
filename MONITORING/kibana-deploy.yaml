@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: elasticsearch
-  namespace: cloud5335-dev
+  namespace: satyam321-dev
 spec:
   replicas: 1
   selector:
@@ -32,7 +32,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: elasticsearch
-  namespace: cloud5335-dev
+  namespace: satyam321-dev
 spec:
   selector:
     app: elasticsearch
@@ -44,7 +44,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kibana
-  namespace: cloud5335-dev
+  namespace: satyam321-dev
 spec:
   replicas: 1
   selector:
@@ -68,7 +68,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: kibana
-  namespace: cloud5335-dev
+  namespace: satyam321-dev
 spec:
   selector:
     app: kibana
@@ -80,7 +80,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: kibana
-  namespace: cloud5335-dev
+  namespace: satyam321-dev
 spec:
   to:
     kind: Service
@@ -92,7 +92,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: fluentd-config
-  namespace: cloud5335-dev
+  namespace: satyam321-dev
 data:
   fluent.conf: |
     <source>
@@ -115,7 +115,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: fluentd
-  namespace: vcloud5335-dev
+  namespace: satyam321-dev
 spec:
   replicas: 1
   selector:
