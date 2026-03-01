@@ -11,7 +11,7 @@ spec:
   source:
     type: Git
     git:
-      uri: "https://github.com/CloudTechDevOps/Hotstar-DevOps-Project-NodeJS.git"
+      uri: "https://github.com/satyammaurya-cloud/Hotstar-DevOps-Project-NodeJS.git"
       ref: main     # change if your default branch is not 'main'
     contextDir: "." # if Dockerfile is at repo root
   strategy:
