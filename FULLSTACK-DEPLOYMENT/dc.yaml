@@ -2,7 +2,7 @@ apiVersion: apps.openshift.io/v1
 kind: DeploymentConfig
 metadata:
   name: nodejs-app
-  namespace: cloud53375-dev
+  namespace: satyam321-dev
   labels:
     app: nodejs-app
 spec:
@@ -31,13 +31,13 @@ spec:
         from:
           kind: ImageStreamTag
           name: nodejs-image:latest
-          namespace: cloud53375-dev
+          namespace: satyam321-dev
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: nodejs-app
-  namespace: cloud53375-dev
+  namespace: satyam321-dev
   labels:
     app: nodejs-app
 spec:
@@ -52,7 +52,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: nodejs-app
-  namespace: cloud53375-dev
+  namespace: satyam321-dev
 spec:
   to:
     kind: Service
