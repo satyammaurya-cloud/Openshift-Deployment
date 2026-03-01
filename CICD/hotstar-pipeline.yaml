@@ -2,7 +2,7 @@ apiVersion: tekton.dev/v1
 kind: Pipeline
 metadata:
   name: deploy-sample-pipeline
-  namespace: cloud5335-dev
+  namespace: satyam321-dev
 spec:
   params:
     - default: 'veeranarni/hotstar:latest'        #### cahnge here your actual image
@@ -31,7 +31,7 @@ spec:
               kind: Deployment
               metadata:
                 name: sample-app
-                namespace: cloud5335-dev
+                namespace: satyam321-dev
               spec:
                 replicas: 1
                 selector:
@@ -52,7 +52,7 @@ spec:
               kind: Service
               metadata:
                 name: sample-service
-                namespace: cloud5335-dev
+                namespace: satyam321-dev
               spec:
                 selector:
                   app: sample-app
@@ -65,7 +65,7 @@ spec:
               kind: Route
               metadata:
                 name: sample-route
-                namespace: cloud5335-dev
+                namespace: satyam321-dev
               spec:
                 to:
                   kind: Service
